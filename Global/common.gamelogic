@@ -1,0 +1,64 @@
+{
+  "Id": "",
+  "GameId": "",
+  "EntryKey": "gamelogic://99689dfb0e594b64b5af085b61efdb61",
+  "ContentType": "x-mod/gamelogic",
+  "Content": "",
+  "Usage": 0,
+  "UsePublish": 1,
+  "UseService": 0,
+  "CoreVersion": "1.26.0.0",
+  "StudioVersion": "0.1.0.0",
+  "DynamicLoading": 0,
+  "ContentProto": {
+    "Use": "Binary",
+    "Entities": [
+      {
+        "id": "3d777387-fced-4715-803c-d136febc3f8a",
+        "path": "/common",
+        "componentNames": "script.MonsterSpawn,script.TowerSpawn,script.GridManager",
+        "jsonString": {
+          "name": "common",
+          "path": "/common",
+          "nameEditable": false,
+          "enable": true,
+          "visible": true,
+          "localize": false,
+          "displayOrder": 0,
+          "pathConstraints": "/",
+          "revision": 7,
+          "modelId": null,
+          "@components": [
+            {
+              "@type": "script.MonsterSpawn",
+              "Enable": true,
+              "modelEntryID": "model://maplestorymonster$04bb2baf7b004ac69fc2c78539fa8180",
+              "spawnLocation": {
+                "x": -4.5,
+                "y": 4.5,
+                "z": 0.0
+              },
+              "maxSpawnCount": 10,
+              "spawnDelay": 1.0
+            },
+            {
+              "@type": "script.TowerSpawn",
+              "Enable": true,
+              "modelEntryID": "model://86f56dd9-5207-4114-9a99-dd3adf389618",
+              "spawnLocation": {
+                "x": -3.5,
+                "y": 3.5,
+                "z": 0.0
+              }
+            },
+            {
+              "@type": "script.GridManager",
+              "Enable": true
+            }
+          ],
+          "@version": 1
+        }
+      }
+    ]
+  }
+}
