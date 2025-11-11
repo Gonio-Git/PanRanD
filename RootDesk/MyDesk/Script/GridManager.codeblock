@@ -1,7 +1,7 @@
 {
   "Id": "",
   "GameId": "",
-  "EntryKey": "codeblock://e9c86583-b0ba-4612-9c51-b7a9e4c19a5a",
+  "EntryKey": "codeblock://0ee01d1a-a168-49fc-a99a-1612ffdd4faf",
   "ContentType": "x-mod/codeblock",
   "Content": "",
   "Usage": 0,
@@ -22,7 +22,7 @@
         "Minor": 1
       },
       "Description": "",
-      "Id": "e9c86583-b0ba-4612-9c51-b7a9e4c19a5a",
+      "Id": "0ee01d1a-a168-49fc-a99a-1612ffdd4faf",
       "Language": 1,
       "Name": "GridManager",
       "Type": 1,

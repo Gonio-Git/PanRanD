@@ -1,7 +1,7 @@
 {
   "Id": "",
   "GameId": "",
-  "EntryKey": "directory://ec08628847494abc820ef64a9688813d",
+  "EntryKey": "directory://b808c6bfa10746938dcd481026d60cdd",
   "ContentType": "x-mod/directory",
   "Content": "",
   "Usage": 0,
@@ -13,14 +13,11 @@
   "ContentProto": {
     "Use": "Json",
     "Json": {
-      "entry_id": "directory://ec08628847494abc820ef64a9688813d",
+      "entry_id": "directory://b808c6bfa10746938dcd481026d60cdd",
       "name": "Script",
       "lock": false,
       "folding": false,
-      "nameEditable": true,
-      "worldCoreVersion": "1.26.0.0",
-      "worldStudioVersion": "0.1.0.0",
-      "useService": 0
+      "nameEditable": true
     }
   }
 }

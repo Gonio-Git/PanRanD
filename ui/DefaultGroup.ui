@@ -1,7 +1,7 @@
 {
   "Id": "",
   "GameId": "",
-  "EntryKey": "ui://642f3c07-10c5-4649-a3ca-e90aca278510",
+  "EntryKey": "ui://c0bbe0ec-770a-4147-9f6f-a38cc4a53ca6",
   "ContentType": "x-mod/ui",
   "Content": "",
   "Usage": 0,
@@ -14,7 +14,7 @@
     "Use": "Binary",
     "Entities": [
       {
-        "id": "642f3c07-10c5-4649-a3ca-e90aca278510",
+        "id": "c0bbe0ec-770a-4147-9f6f-a38cc4a53ca6",
         "path": "/ui/DefaultGroup",
         "componentNames": "MOD.Core.UITransformComponent,MOD.Core.UIGroupComponent,MOD.Core.CanvasGroupComponent",
         "jsonString": {
@@ -26,16 +26,17 @@
           "localize": true,
           "displayOrder": 0,
           "pathConstraints": "//",
-          "revision": 1,
+          "revision": 0,
           "origin": {
             "type": "Model",
-            "entry_id": "UIGroup",
+            "entry_id": "uigroup",
             "sub_entity_id": null
           },
           "modelId": "uigroup",
           "@components": [
             {
               "@type": "MOD.Core.UITransformComponent",
+              "ActivePlatform": 255,
               "AlignmentOption": 15,
               "AnchorsMax": {
                 "x": 1.0,
@@ -47,11 +48,11 @@
               },
               "MobileOnly": false,
               "OffsetMax": {
-                "x": 1.52587891E-05,
+                "x": 0.0,
                 "y": 0.0
               },
               "OffsetMin": {
-                "x": 1.52587891E-05,
+                "x": 0.0,
                 "y": 0.0
               },
               "Pivot": {
@@ -70,7 +71,7 @@
               },
               "UIVersion": 2,
               "anchoredPosition": {
-                "x": 1.52587891E-05,
+                "x": 0.0,
                 "y": 0.0
               },
               "Position": {
@@ -110,7 +111,7 @@
         }
       },
       {
-        "id": "dd8d32d8-a1c7-4ab7-9893-955560996f38",
+        "id": "7f861a16-e1f5-4513-85a2-c9b56503efcd",
         "path": "/ui/DefaultGroup/Button_Attack",
         "componentNames": "MOD.Core.UITransformComponent,MOD.Core.SpriteGUIRendererComponent,MOD.Core.ButtonComponent",
         "jsonString": {
@@ -122,7 +123,7 @@
           "localize": true,
           "displayOrder": 0,
           "pathConstraints": "///",
-          "revision": 1,
+          "revision": 0,
           "origin": {
             "type": "Model",
             "entry_id": "UIButton",
@@ -205,6 +206,7 @@
               },
               "OverrideSorting": false,
               "PlayRate": 1.0,
+              "PreserveSprite": 0,
               "StartFrameIndex": 0,
               "Color": {
                 "r": 1.0,
@@ -295,7 +297,7 @@
         }
       },
       {
-        "id": "ee2137ce-95ce-4b70-8983-91dd5534543f",
+        "id": "9f931bac-d6f5-491a-a96a-01b839b6e15e",
         "path": "/ui/DefaultGroup/Button_Attack/UISprite",
         "componentNames": "MOD.Core.UITransformComponent,MOD.Core.SpriteGUIRendererComponent",
         "jsonString": {
@@ -307,7 +309,7 @@
           "localize": true,
           "displayOrder": 0,
           "pathConstraints": "////",
-          "revision": 1,
+          "revision": 0,
           "origin": {
             "type": "Model",
             "entry_id": "UISprite",
@@ -317,6 +319,7 @@
           "@components": [
             {
               "@type": "MOD.Core.UITransformComponent",
+              "ActivePlatform": 255,
               "AlignmentOption": 0,
               "AnchorsMax": {
                 "x": 0.5,
@@ -389,6 +392,7 @@
               },
               "OverrideSorting": false,
               "PlayRate": 1.0,
+              "PreserveSprite": 0,
               "StartFrameIndex": 0,
               "Color": {
                 "r": 1.0,
@@ -432,7 +436,7 @@
         }
       },
       {
-        "id": "1d3343e4-8a97-4b88-9346-2561c1cfc1b7",
+        "id": "6b1820f5-0c0c-4a55-b0c5-338f5b5192f7",
         "path": "/ui/DefaultGroup/Button_Jump",
         "componentNames": "MOD.Core.UITransformComponent,MOD.Core.SpriteGUIRendererComponent,MOD.Core.ButtonComponent",
         "jsonString": {
@@ -444,7 +448,7 @@
           "localize": true,
           "displayOrder": 1,
           "pathConstraints": "///",
-          "revision": 1,
+          "revision": 0,
           "origin": {
             "type": "Model",
             "entry_id": "UIButton",
@@ -527,6 +531,7 @@
               },
               "OverrideSorting": false,
               "PlayRate": 1.0,
+              "PreserveSprite": 0,
               "StartFrameIndex": 0,
               "Color": {
                 "r": 1.0,
@@ -617,7 +622,7 @@
         }
       },
       {
-        "id": "53e6c063-78cc-41b5-8319-81bfe6239588",
+        "id": "a9526f99-5b9b-4149-9b74-d9a1f7933eb7",
         "path": "/ui/DefaultGroup/Button_Jump/UISprite",
         "componentNames": "MOD.Core.UITransformComponent,MOD.Core.SpriteGUIRendererComponent",
         "jsonString": {
@@ -629,7 +634,7 @@
           "localize": true,
           "displayOrder": 0,
           "pathConstraints": "////",
-          "revision": 1,
+          "revision": 0,
           "origin": {
             "type": "Model",
             "entry_id": "UISprite",
@@ -639,6 +644,7 @@
           "@components": [
             {
               "@type": "MOD.Core.UITransformComponent",
+              "ActivePlatform": 255,
               "AlignmentOption": 0,
               "AnchorsMax": {
                 "x": 0.5,
@@ -711,6 +717,7 @@
               },
               "OverrideSorting": false,
               "PlayRate": 1.0,
+              "PreserveSprite": 0,
               "StartFrameIndex": 0,
               "Color": {
                 "r": 1.0,
@@ -754,7 +761,7 @@
         }
       },
       {
-        "id": "13510d5d-c903-446f-96c7-337ab0f81ef9",
+        "id": "2f850b97-b76e-432a-a22e-09f62343f7c7",
         "path": "/ui/DefaultGroup/UIJoystick",
         "componentNames": "MOD.Core.UITransformComponent,MOD.Core.SpriteGUIRendererComponent,MOD.Core.JoystickComponent",
         "jsonString": {
@@ -766,7 +773,7 @@
           "localize": true,
           "displayOrder": 2,
           "pathConstraints": "///",
-          "revision": 1,
+          "revision": 0,
           "origin": {
             "type": "Model",
             "entry_id": "UISprite",
@@ -849,6 +856,7 @@
               },
               "OverrideSorting": false,
               "PlayRate": 1.0,
+              "PreserveSprite": 0,
               "StartFrameIndex": 0,
               "Color": {
                 "r": 0.0,
@@ -889,6 +897,7 @@
             },
             {
               "@type": "MOD.Core.JoystickComponent",
+              "Axis": 0,
               "DynamicStick": true,
               "Enable": true
             }
@@ -897,7 +906,7 @@
         }
       },
       {
-        "id": "470f0673-436d-4927-85ee-d5254ab6c53f",
+        "id": "7c0f8bb5-cf19-437c-9bb8-97e81f836dce",
         "path": "/ui/DefaultGroup/UIChat",
         "componentNames": "MOD.Core.UITransformComponent,MOD.Core.SpriteGUIRendererComponent,MOD.Core.ChatComponent",
         "jsonString": {
@@ -909,7 +918,7 @@
           "localize": true,
           "displayOrder": 3,
           "pathConstraints": "///",
-          "revision": 1,
+          "revision": 0,
           "origin": {
             "type": "Model",
             "entry_id": "UIEmpty",
@@ -919,6 +928,7 @@
           "@components": [
             {
               "@type": "MOD.Core.UITransformComponent",
+              "ActivePlatform": 255,
               "AlignmentOption": 4,
               "AnchorsMax": {
                 "x": 0.0,
@@ -991,6 +1001,7 @@
               },
               "OverrideSorting": false,
               "PlayRate": 1.0,
+              "PreserveSprite": 0,
               "StartFrameIndex": 0,
               "Color": {
                 "r": 0.0,
@@ -1033,6 +1044,7 @@
               "@type": "MOD.Core.ChatComponent",
               "Expand": true,
               "UseChatBalloon": true,
+              "UseChatEmotion": true,
               "Enable": true
             }
           ],

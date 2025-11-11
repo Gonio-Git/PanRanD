@@ -14,10 +14,10 @@ script MonsterSpawn extends Component
 	property number spawnedCount = 0
 
 	@Sync
-	property number spawnDelay = 0
+	property number delay = 0
 
 	@Sync
-	property number delayProgression = 0
+	property number spawnDelay = 0
 
 	@ExecSpace("ServerOnly")
 	method void OnBeginPlay()
@@ -27,11 +27,11 @@ script MonsterSpawn extends Component
 	@ExecSpace("ServerOnly")
 	method void OnUpdate(number delta)
 		--delta는 프레임을 현재 프레임으로부터 이전 프레임까지의 시간 간격(초)입니다.
+		self.delay = self.delay + delta
 		
-		self.delayProgression = self.delayProgression + delta
-				
-		if self.delayProgression >= self.spawnDelay then
-		self.delayProgression = 0
+		if self.delay >= self.spawnDelay then
+			self.delay = 0
+		
 			if self.spawnedCount < self.maxSpawnCount then
 				self:SpawnMonster()
 				self.spawnedCount = self.spawnedCount + 1
@@ -41,13 +41,13 @@ script MonsterSpawn extends Component
 
 	method void SpawnMonster()
 		local parent = _EntityService:GetEntityByPath("/maps/map01")
-				
+		
 		local monster = _SpawnService:SpawnByModelId(
-						self.modelEntryID, 
-						"SpawnedMonster",
-						self.spawnLocation,
-						parent)
-				
+		        self.modelEntryID, 
+		        "SpawnedMonster",
+		        self.spawnLocation,
+		        parent)
+		
 		local moveComp = monster:AddComponent("MonsterMove")
 	end
 

@@ -1,7 +1,7 @@
 {
   "Id": "",
   "GameId": "",
-  "EntryKey": "model://maplestorymonster$0549f3867aa84eb99a600f13762456a8",
+  "EntryKey": "model://maplestorymonster$04bb2baf7b004ac69fc2c78539fa8180",
   "ContentType": "x-mod/model",
   "Content": "",
   "Usage": 0,
@@ -14,19 +14,18 @@
     "Use": "Json",
     "Json": {
       "Type": "MODLazyModel",
-      "Name": "MoveMonster_monster-68",
-      "Id": "maplestorymonster$0549f3867aa84eb99a600f13762456a8",
+      "Name": "Monster",
+      "Id": "maplestorymonster$04bb2baf7b004ac69fc2c78539fa8180",
       "ModelId": "MoveMonster",
       "DataSetId": "MonsterDataSet",
-      "DataId": "0549f3867aa84eb99a600f13762456a8",
+      "DataId": "04bb2baf7b004ac69fc2c78539fa8180",
       "Target": {
         "Version": 1,
-        "Name": "MoveMonster_monster-68",
+        "Name": "Monster",
         "BaseModelId": "movemonster",
-        "Id": "maplestorymonster$0549f3867aa84eb99a600f13762456a8",
+        "Id": "maplestorymonster$04bb2baf7b004ac69fc2c78539fa8180",
         "Components": [
-          "MOD.Core.KinematicbodyComponent",
-          "script.MonsterMove"
+          "MOD.Core.KinematicbodyComponent"
         ],
         "Properties": [],
         "Values": [
@@ -57,12 +56,11 @@
             },
             "Value": {
               "$type": "MOD.Core.MODSyncDictionary`2[[System.String, mscorlib],[System.String, mscorlib]], MOD.Core",
-              "move": "e56350af9f564c1e832201963a3008a5",
-              "stand": "e2eb17e3595e4c808fa1d93a091be689",
-              "attack": "e091d282f31541ccb615864674708558",
-              "skill": "2f26687204a64757af3208e5789b10aa",
-              "hit": "7fa5851151764692ae0d8c6390eec0f5",
-              "die": "bc3ec8fc186044e1be1ef6fbaffef5ff"
+              "move": "1eaee5c96fec4a07afdf902b96e3a0d8",
+              "attack": "971f0209fc1245b3b755dd250c5a836d",
+              "stand": "981c64ae30bd4f98aef886e9314d8e64",
+              "hit": "e77fd0ddfcc44f02af01fd4eb2e9ff97",
+              "die": "8e58798019c74928a99bfcbb9054a744"
             }
           },
           {
@@ -72,7 +70,7 @@
               "$type": "MODNativeType",
               "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
             },
-            "Value": "e2eb17e3595e4c808fa1d93a091be689"
+            "Value": "981c64ae30bd4f98aef886e9314d8e64"
           },
           {
             "TargetType": null,
@@ -82,14 +80,38 @@
               "type": "MOD.Core.RenderSettingType, MOD.Core, Version=1.26.0.0, Culture=neutral, PublicKeyToken=null"
             },
             "Value": 1
+          },
+          {
+            "TargetType": "script.MonsterAttack",
+            "Name": "Enable",
+            "ValueType": {
+              "$type": "MODNativeType",
+              "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+            },
+            "Value": false
+          },
+          {
+            "TargetType": "script.Monster",
+            "Name": "Enable",
+            "ValueType": {
+              "$type": "MODNativeType",
+              "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+            },
+            "Value": false
+          },
+          {
+            "TargetType": "MOD.Core.AIWanderComponent",
+            "Name": "Enable",
+            "ValueType": {
+              "$type": "MODNativeType",
+              "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+            },
+            "Value": false
           }
         ],
         "EventLinks": [],
         "Children": []
-      },
-      "worldCoreVersion": "1.26.0.0",
-      "worldStudioVersion": "0.1.0.0",
-      "useService": 0
+      }
     }
   }
 }

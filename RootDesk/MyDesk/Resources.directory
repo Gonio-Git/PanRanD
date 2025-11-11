@@ -1,7 +1,7 @@
 {
   "Id": "",
   "GameId": "",
-  "EntryKey": "directory://c20e0761287d4a98ad85e9e5bf6b7ea1",
+  "EntryKey": "directory://685d77487cbb4559a25c35fb2b44034d",
   "ContentType": "x-mod/directory",
   "Content": "",
   "Usage": 0,
@@ -13,14 +13,11 @@
   "ContentProto": {
     "Use": "Json",
     "Json": {
-      "entry_id": "directory://c20e0761287d4a98ad85e9e5bf6b7ea1",
+      "entry_id": "directory://685d77487cbb4559a25c35fb2b44034d",
       "name": "Resources",
       "lock": false,
       "folding": false,
-      "nameEditable": true,
-      "worldCoreVersion": "1.26.0.0",
-      "worldStudioVersion": "0.1.0.0",
-      "useService": 0
+      "nameEditable": true
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "Id": "",
   "GameId": "",
-  "EntryKey": "directory://ca62517748d8499aa65b43607e41b5cb",
+  "EntryKey": "directory://076456cd4f7d4cb195f981e977106e5a",
   "ContentType": "x-mod/directory",
   "Content": "",
   "Usage": 0,
@@ -13,14 +13,11 @@
   "ContentProto": {
     "Use": "Json",
     "Json": {
-      "entry_id": "directory://ca62517748d8499aa65b43607e41b5cb",
+      "entry_id": "directory://076456cd4f7d4cb195f981e977106e5a",
       "name": "MyDesk",
       "lock": false,
       "folding": false,
-      "nameEditable": false,
-      "worldCoreVersion": "1.26.0.0",
-      "worldStudioVersion": "0.1.0.0",
-      "useService": 0
+      "nameEditable": false
     }
   }
 }

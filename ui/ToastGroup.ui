@@ -26,7 +26,7 @@
           "localize": true,
           "displayOrder": 2,
           "pathConstraints": "//",
-          "revision": 1,
+          "revision": 0,
           "origin": {
             "type": "Model",
             "entry_id": "uigroup",
@@ -36,6 +36,7 @@
           "@components": [
             {
               "@type": "MOD.Core.UITransformComponent",
+              "ActivePlatform": 255,
               "AlignmentOption": 15,
               "AnchorsMax": {
                 "x": 1.0,
@@ -122,7 +123,7 @@
           "localize": true,
           "displayOrder": 0,
           "pathConstraints": "///",
-          "revision": 1,
+          "revision": 0,
           "origin": {
             "type": "Model",
             "entry_id": "UISprite",
@@ -132,6 +133,7 @@
           "@components": [
             {
               "@type": "MOD.Core.UITransformComponent",
+              "ActivePlatform": 255,
               "AlignmentOption": 3,
               "AnchorsMax": {
                 "x": 0.5,
@@ -204,6 +206,7 @@
               },
               "OverrideSorting": false,
               "PlayRate": 1.0,
+              "PreserveSprite": 0,
               "StartFrameIndex": 0,
               "Color": {
                 "r": 1.0,
@@ -245,6 +248,16 @@
             {
               "@type": "MOD.Core.TextComponent",
               "Alignment": 4,
+              "Bold": false,
+              "DropShadow": false,
+              "DropShadowAngle": 30.0,
+              "DropShadowColor": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.72
+              },
+              "DropShadowDistance": 32.0,
               "Font": 0,
               "FontColor": {
                 "r": 1.0,
@@ -265,6 +278,7 @@
                 "x": 1.0,
                 "y": -1.0
               },
+              "OutlineWidth": 1.0,
               "Overflow": 0,
               "OverrideSorting": false,
               "Padding": {

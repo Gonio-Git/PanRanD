@@ -9,12 +9,13 @@ script TowerSpawn extends Component
 
 	method void SpawnTower()
 		local parent = _EntityService:GetEntityByPath("/maps/map01")
-				    	
+		    	
 		_SpawnService:SpawnByModelId(
-						self.modelEntryID, 
-				        "SpawnedTower",
-				        self.spawnLocation,
-				        parent)
+		        self.modelEntryID, 
+		        "SpawnedTower",
+		        self.spawnLocation,
+		        parent)
+		
 	end
 
 	@EventSender("Service", "InputService")
