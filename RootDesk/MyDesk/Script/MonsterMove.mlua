@@ -1,0 +1,38 @@
+@Component
+script MonsterMove extends Component
+
+	property table pathPoints = {Vector3(-4.5,4.5,0),Vector3(4.5,4.5,0),Vector3(4.5,-4.5,0),Vector3(-4.5,-4.5,0)}
+
+	@Sync
+	property integer currentIndex = 1
+
+	@ExecSpace("ServerOnly")
+	method void OnUpdate(number delta)
+		local entity = self.Entity
+		local movement = entity.MovementComponent
+		if movement == nil then return end
+				
+		local curPos = entity.TransformComponent.Position
+		local targetPos = self.pathPoints[self.currentIndex]
+				
+		-- 방향 벡터 계산
+		local dir = targetPos - curPos
+		local dist = dir:Magnitude() --vector3를 실수로 변형
+				
+		-- 목표점 근처 도달 시 다음 목표로 변경(0.01씩 차이가 나지만 오차범위 이내)
+		if dist < 0.01 then
+			self.currentIndex = self.currentIndex + 1
+			if self.currentIndex > #self.pathPoints then
+				self.currentIndex = 1
+			end
+			movement:Stop()
+			return
+		end
+				
+		dir = dir:ToVector2()
+		dir = dir:Normalize()
+				
+		movement:MoveToDirection(dir,delta)
+	end
+
+end

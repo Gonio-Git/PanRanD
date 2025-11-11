@@ -1,0 +1,90 @@
+@Component
+script GridManager extends Component
+
+	@Sync
+	property integer gridSize = 8
+
+	@Sync
+	property number tileSize = 1
+
+	@Sync
+	property Vector3 originLocation = Vector3(-4,4,0)
+
+	property table gridArray = {}
+
+	@ExecSpace("ServerOnly")
+	method void OnBeginPlay()
+		self:CreateGrid()
+	end
+
+	method void CreateGrid()
+		self.gridArray = {}
+				
+		for y = 1, self.gridSize do
+			self.gridArray[y] = {}
+			for x = 1, self.gridSize do
+				local pos = Vector3(
+					self.originLocation.x + (x - 1) * self.tileSize,
+				    self.originLocation.y - (y - 1) * self.tileSize,
+				    self.originLocation.z
+				)
+				self.gridArray[y][x] = {
+					x = x,
+					y = y,
+					isBuildable = true,
+					isTowerPlaced = false,
+					worldPos = pos
+				}
+			end
+		end
+				
+		log("[GridManager] Grid Created: " .. tostring(self.gridSize) .. "x" .. tostring(self.gridSize))
+	end
+
+	method table GetCell(integer x, integer y)
+		if self.gridArray[y] == nil then return nil end
+		return self.gridArray[y][x]
+	end
+
+	method table GetEmptyCell()
+		for y = 1, self.gridSize do
+			for x = 1, self.gridSize do
+				local cell = self.gridArray[y][x]
+				if cell.isBuildable and cell.isTowerPlaced == false then
+					return cell
+				end
+			end
+		end
+		return nil
+	end
+
+	method void SetTower(integer x, integer y, boolean placed)
+		local cell = self:GetCell(x, y)
+		if cell ~= nil then
+			cell.isTowerPlaced = placed
+		end
+	end
+
+	method table GetNearestCell(Vector3 worldPos)
+		local nearest = nil
+		local minDist = 99999
+		for y = 1, self.gridSize do
+			for x = 1, self.gridSize do
+				local cell = self.gridArray[y][x]
+				local dx = worldPos.x - cell.worldPos.X
+				local dy = worldPos.y - cell.worldPos.Y
+				local dist = math.sqrt(dx*dx + dy*dy)
+				if dist < minDist then
+					minDist = dist
+					nearest = cell
+				end
+			end
+		end
+		return nearest
+	end
+
+	method void test()
+		
+	end
+
+end

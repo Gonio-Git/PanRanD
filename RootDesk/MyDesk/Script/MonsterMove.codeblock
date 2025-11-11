@@ -28,48 +28,6 @@
       "Type": 1,
       "Source": 0,
       "Target": null,
-      "Properties": [
-        {
-          "Type": "table",
-          "DefaultValue": "{Vector3(-4.5,4.5,0),Vector3(4.5,4.5,0),Vector3(4.5,-4.5,0),Vector3(-4.5,-4.5,0)}",
-          "SyncDirection": 0,
-          "Attributes": [],
-          "Name": "pathPoints"
-        },
-        {
-          "Type": "integer",
-          "DefaultValue": "1",
-          "SyncDirection": 3,
-          "Attributes": [],
-          "Name": "currentIndex"
-        }
-      ],
-      "Methods": [
-        {
-          "Return": {
-            "Type": "void",
-            "DefaultValue": null,
-            "SyncDirection": 0,
-            "Attributes": [],
-            "Name": null
-          },
-          "Arguments": [
-            {
-              "Type": "number",
-              "DefaultValue": null,
-              "SyncDirection": 0,
-              "Attributes": [],
-              "Name": "delta"
-            }
-          ],
-          "Code": "local entity = self.Entity\nlocal movement = entity.MovementComponent\nif movement == nil then return end\n\t\t\nlocal curPos = entity.TransformComponent.Position\nlocal targetPos = self.pathPoints[self.currentIndex]\n\t\t\n-- 방향 벡터 계산\nlocal dir = targetPos - curPos\nlocal dist = dir:Magnitude() --vector3를 실수로 변형\n\t\t\n-- 목표점 근처 도달 시 다음 목표로 변경(0.01씩 차이가 나지만 오차범위 이내)\nif dist < 0.01 then\n\tself.currentIndex = self.currentIndex + 1\n\tif self.currentIndex > #self.pathPoints then\n\t\tself.currentIndex = 1\n\tend\n\tmovement:Stop()\n\treturn\nend\n\t\t\ndir = dir:ToVector2()\ndir = dir:Normalize()\n\t\t\nmovement:MoveToDirection(dir,delta)",
-          "Scope": 2,
-          "ExecSpace": 1,
-          "Attributes": [],
-          "Name": "OnUpdate"
-        }
-      ],
-      "EntityEventHandlers": [],
       "worldCoreVersion": "1.26.0.0",
       "worldStudioVersion": "0.1.0.0",
       "useService": 0

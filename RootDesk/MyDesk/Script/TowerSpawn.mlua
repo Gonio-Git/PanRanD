@@ -1,0 +1,35 @@
+@Component
+script TowerSpawn extends Component
+
+	@Sync
+	property string modelEntryID = ""
+
+	@Sync
+	property Vector3 spawnLocation = Vector3(0,0,0)
+
+	method void SpawnTower()
+		local parent = _EntityService:GetEntityByPath("/maps/map01")
+				    	
+		_SpawnService:SpawnByModelId(
+						self.modelEntryID, 
+				        "SpawnedTower",
+				        self.spawnLocation,
+				        parent)
+	end
+
+	@EventSender("Service", "InputService")
+	handler HandleKeyDownEvent(KeyDownEvent event)
+		--------------- Native Event Sender Info ----------------
+		-- Sender: InputService
+		-- Space: Client
+		---------------------------------------------------------
+		
+		-- Parameters
+		local key = event.key
+		---------------------------------------------------------
+		if key == KeyboardKey.X then
+			self:SpawnTower()
+		end
+	end
+
+end
