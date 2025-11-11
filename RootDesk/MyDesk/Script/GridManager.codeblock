@@ -193,12 +193,24 @@
           "ExecSpace": 0,
           "Attributes": [],
           "Name": "GetNearestCell"
+        },
+        {
+          "Return": {
+            "Type": "void",
+            "DefaultValue": null,
+            "SyncDirection": 0,
+            "Attributes": [],
+            "Name": null
+          },
+          "Arguments": null,
+          "Code": "",
+          "Scope": 2,
+          "ExecSpace": 0,
+          "Attributes": [],
+          "Name": "test"
         }
       ],
-      "EntityEventHandlers": [],
-      "worldCoreVersion": "1.26.0.0",
-      "worldStudioVersion": "0.1.0.0",
-      "useService": 0
+      "EntityEventHandlers": []
     }
   }
 }
