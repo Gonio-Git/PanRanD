@@ -1,0 +1,88 @@
+{
+  "Id": "",
+  "GameId": "",
+  "EntryKey": "model://86f56dd9-5207-4114-9a99-dd3adf389618",
+  "ContentType": "x-mod/model",
+  "Content": "",
+  "Usage": 0,
+  "UsePublish": 1,
+  "UseService": 0,
+  "CoreVersion": "1.26.0.0",
+  "StudioVersion": "0.1.0.0",
+  "DynamicLoading": 0,
+  "ContentProto": {
+    "Use": "Json",
+    "Json": {
+      "Version": 1,
+      "Name": "Tower_test",
+      "BaseModelId": null,
+      "Id": "86f56dd9-5207-4114-9a99-dd3adf389618",
+      "Components": [
+        "MOD.Core.AvatarRendererComponent",
+        "MOD.Core.CostumeManagerComponent",
+        "MOD.Core.TransformComponent",
+        "MOD.Core.KinematicbodyComponent",
+        "MOD.Core.StateComponent",
+        "MOD.Core.DamageSkinSpawnerComponent",
+        "MOD.Core.NameTagComponent",
+        "MOD.Core.ChatBalloonComponent",
+        "MOD.Core.DamageSkinSettingComponent",
+        "MOD.Core.TriggerComponent",
+        "MOD.Core.AvatarStateAnimationComponent"
+      ],
+      "Properties": [],
+      "Values": [
+        {
+          "TargetType": "MOD.Core.CostumeManagerComponent",
+          "Name": "CustomBodyEquip",
+          "ValueType": {
+            "$type": "MODNativeType",
+            "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+          },
+          "Value": "b65a754c25174b10a24d0288ca0468a0"
+        },
+        {
+          "TargetType": "MOD.Core.CostumeManagerComponent",
+          "Name": "CustomCapEquip",
+          "ValueType": {
+            "$type": "MODNativeType",
+            "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+          },
+          "Value": "8a80b31769384d66a5912a40b2d6c95f"
+        },
+        {
+          "TargetType": "MOD.Core.CostumeManagerComponent",
+          "Name": "CustomCapeEquip",
+          "ValueType": {
+            "$type": "MODNativeType",
+            "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+          },
+          "Value": "41789362686a46599f223b44457f27d8"
+        },
+        {
+          "TargetType": "MOD.Core.CostumeManagerComponent",
+          "Name": "CustomCoatEquip",
+          "ValueType": {
+            "$type": "MODNativeType",
+            "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+          },
+          "Value": "0c541a62ed1342d3ae3bdef5a6425289"
+        },
+        {
+          "TargetType": "MOD.Core.CostumeManagerComponent",
+          "Name": "CustomOneHandedWeaponEquip",
+          "ValueType": {
+            "$type": "MODNativeType",
+            "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+          },
+          "Value": "1965573dd25047c9a6ec6f6f42a298dd"
+        }
+      ],
+      "EventLinks": [],
+      "Children": [],
+      "worldCoreVersion": "1.26.0.0",
+      "worldStudioVersion": "0.1.0.0",
+      "useService": 0
+    }
+  }
+}

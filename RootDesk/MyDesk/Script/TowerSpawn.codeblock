@@ -1,0 +1,80 @@
+{
+  "Id": "",
+  "GameId": "",
+  "EntryKey": "codeblock://3ac0168d-b670-47c7-840e-0e65a1eaa3d4",
+  "ContentType": "x-mod/codeblock",
+  "Content": "",
+  "Usage": 0,
+  "UsePublish": 1,
+  "UseService": 0,
+  "CoreVersion": "1.26.0.0",
+  "StudioVersion": "0.1.0.0",
+  "DynamicLoading": 0,
+  "ContentProto": {
+    "Use": "Json",
+    "Json": {
+      "CoreVersion": {
+        "Major": 0,
+        "Minor": 2
+      },
+      "ScriptVersion": {
+        "Major": 1,
+        "Minor": 1
+      },
+      "Description": "",
+      "Id": "3ac0168d-b670-47c7-840e-0e65a1eaa3d4",
+      "Language": 1,
+      "Name": "TowerSpawn",
+      "Type": 1,
+      "Source": 0,
+      "Target": null,
+      "Properties": [
+        {
+          "Type": "string",
+          "DefaultValue": "\"\"",
+          "SyncDirection": 3,
+          "Attributes": [],
+          "Name": "modelEntryID"
+        },
+        {
+          "Type": "Vector3",
+          "DefaultValue": "Vector3(0,0,0)",
+          "SyncDirection": 3,
+          "Attributes": [],
+          "Name": "spawnLocation"
+        }
+      ],
+      "Methods": [
+        {
+          "Return": {
+            "Type": "void",
+            "DefaultValue": null,
+            "SyncDirection": 0,
+            "Attributes": [],
+            "Name": null
+          },
+          "Arguments": null,
+          "Code": "local parent = _EntityService:GetEntityByPath(\"/maps/map01\")\n\t\t    \t\n_SpawnService:SpawnByModelId(\n\t\t\t\tself.modelEntryID, \n\t\t        \"SpawnedTower\",\n\t\t        self.spawnLocation,\n\t\t        parent)",
+          "Scope": 2,
+          "ExecSpace": 0,
+          "Attributes": [],
+          "Name": "SpawnTower"
+        }
+      ],
+      "EntityEventHandlers": [
+        {
+          "Name": "HandleKeyDownEvent",
+          "EventName": "KeyDownEvent",
+          "ParameterName": "event",
+          "Target": "service:InputService",
+          "Code": "--------------- Native Event Sender Info ----------------\n-- Sender: InputService\n-- Space: Client\n---------------------------------------------------------\n\n-- Parameters\nlocal key = event.key\n---------------------------------------------------------\nif key == KeyboardKey.X then\n\tself:SpawnTower()\nend",
+          "Scope": 0,
+          "ExecSpace": 0
+        }
+      ],
+      "worldCoreVersion": "1.26.0.0",
+      "worldStudioVersion": "0.1.0.0",
+      "useService": 0
+    }
+  }
+}
